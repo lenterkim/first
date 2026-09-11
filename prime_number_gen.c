@@ -1,11 +1,12 @@
 #include "stdio.h"
+#include "math.h"
 
 int main(){
   const int len = 200000;
   int mul = 2;
-  int x[len+1] = {};
+  bool x[len+1] = {};
   x[0] = x[1] = 1;
-  for(int i = 2; i < len; i++){
+  for(int i = 2; i < sqrt(len); i++){
     if(!x[i]) {
       mul = 2;
       while(i*mul < len) {
